@@ -14,3 +14,39 @@ A smart, responsive, and ML-powered web application that predicts an employee’
 ✅ Mobile-friendly and fully deployable
 
 
+Run the app
+python app.py Then open http://127.0.0.1:5000 in your browser.
+
+🔁 Model Training Explanation You can retrain the model by running: python train_model.py Loads & cleans the dataset
+
+Maps income >50K → ₹60K and <=50K → ₹30K
+
+Converts it into monthly salary
+
+Label-encodes categorical features
+
+Scales numerical data
+
+Trains a Linear Regression model
+
+Saves .pkl files for use in prediction
+
+🧠 How Prediction Works User enters details in a clean web form
+
+Flask backend receives form via POST
+
+Input is encoded using saved LabelEncoders
+
+Scaled using StandardScaler
+
+Regression model (income_model.pkl) predicts real salary (₹)
+
+Result is shown with:
+
+Name
+
+Salary value
+
+Chart.js bar chart
+
+PDF Download button button
